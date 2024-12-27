@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/display_data_style.css') }}">
+</head>
+<body>
+    <h1>Добавленные данные JSON</h1>
+    <ul>
+        {% for entry in data %}
+            <li>{{ entry.data }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Добавление кнопки возврата на главную страницу -->
+    <button onclick="window.location.href='/'">Вернуться на главную</button>
+</body>
+</html>

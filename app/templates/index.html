@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Добавление данных в БД</h1>
+    <p></p>
+    <form id="dynamicForm">
+        <div id="inputContainer">
+            <input type="text" name="name0" placeholder="Name">
+        </div>
+        <button type="button" id="addInput">Добавить поле ввода</button>
+        <button type="submit">Сохранить в БД</button>
+    </form>
+
+    <!-- Добавление кнопки для вызова маршрута display_form_data -->
+    <button id="viewData" onclick="window.location.href='/display_form_data'">Посмотреть данные</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
